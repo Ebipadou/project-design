@@ -1,0 +1,520 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(95, 76, 114);
+  /* hide scrollbars but allow scrolling */
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+body {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.container1 {
+  width: 300px;
+  height: 600px;
+  border: 6px solid black;
+  border-radius: 40px;
+  margin: 10px auto;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: center;
+  overflow-y: scroll; /* allow vertical scroll inside */
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container1.active {
+  display: flex;
+}
+
+.location-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.location-ls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-left: px;
+}
+
+#notis {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+ 
+.location-rs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.location-rs-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#select {
+  font-size: 9px;
+  width: 80px;
+  padding: 1px 3px;
+  border-radius: 20px;
+}
+
+.search-bar-container {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+#search {
+  padding: 7px 5px 7px 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  outline: none;
+  width: 180px;
+}
+
+#search-icon {
+  position: absolute;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.search-bar-rs {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  height: 100%;
+}
+
+#tools2 {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* FIXED HERO SECTION */
+.hero-ish-section {
+  background-image: url('../trueAssets/IMG-20250923-WA0059.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  top: 0; /* sticks to top while scrolling */
+  z-index: 10;
+}
+
+.hero-ish-ls-text {
+  color: white;
+}
+
+.hero-ish-ls {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.hero-ish-rs {
+  width: 90px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 10px;
+}
+
+.find-gym {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 7px 15px;
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+/* FIXED FEATURES SECTION */
+.features-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.features-links {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-evenly;
+  white-space: nowrap;
+  gap: 2px;
+}
+
+.feature {
+  margin: 0 2px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(132, 124, 241, 0.548);
+  border: 1px solid rgb(70, 0, 128);
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.link:hover {
+  background-color: rgb(108, 69, 250);
+  color: white;
+}
+
+.main-content-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 15px;
+}
+
+.content-data {
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.content-data-ls {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+}
+
+.content-data-rs {
+  width: 90px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 10px;
+}
+
+.content-btn {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 7px 15px;
+  font-size: 11px;
+  border-radius: 10px;
+}
+
+.footer-section {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(119, 111, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 5px 0px;
+
+  position: sticky;
+  bottom: 0;   /* sticks to bottom */
+  z-index: 10; /* ensures it’s above content */
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Background containers */
+#container1 {
+  background-image: url('../trueAssets/IMG-20250923-WA0057.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+/* #container1text {
+  margin-top: 40px;
+  color: red;
+} */
+
+#container2 {
+  background-image: url('../trueAssets/IMG-20250923-WA0060.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+#container3 {
+  background-image: url('../trueAssets/IMG-20250923-WA0067.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+#container4 {
+  background-image: url('../trueAssets/IMG-20250923-WA0068.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+/* Styling for when the search bar is clicked */
+.container2 {
+  width: 300px;
+  height: 600px;
+  border: 6px solid black;
+  border-radius: 40px;
+  margin: 10px auto;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  padding: 10px 20px;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container2.active {
+  display: flex;
+}
+
+.search-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-container-ls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.search-container-rs {
+  width: 100%;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#searchToggled {
+  padding: 6px 5px 6px 30px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid grey;
+}
+
+.searchIconToggled {
+  width: 18px;
+  position: absolute;
+  top: 20%;
+  left: 4.5%;
+}
+
+#search-cancel-icon {
+  width: 18px;
+}
+
+.recent-search-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 0px;
+}
+
+.recent-searches {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+}
+
+.recent-searches-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.clock {
+  width: 18px;
+}
+
+#search-cancel-icon {
+  cursor: pointer;
+}
+
+.ls-text {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rs-text {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#recent-search-cancel-icon {
+  width: 15px;
+  margin-right: 1px;
+  cursor: pointer;
+}
+
+.browse-all-con {
+  width: 100%;
+  text-align: left;
+  padding: 5px 0;
+}
+
+.sections-con {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nearby-gym {
+  width: 100%;
+  background-image: url('../trueAssets/IMG-20250923-WA0057.jpg');
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  height: 150px;
+  border-radius: 30px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.nearby-gym-data-ls {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: white;
+}
+
+.nearby-gym-explore-btn {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+
+
+/* Image Styling */
+#profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* Image Styling */

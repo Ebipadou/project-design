@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who are you registering as?</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./Styles/gym-center.css">
+</head>
+<body>
+  
+  <!-- Onboarding Screens -->
+    <div class="onboarding-container">
+      <div class="onboarding-header">
+          <h2>Welcome to FitMap</h2>
+          <p>Let's get you started on your fitness journey</p>
+      </div>
+      
+      <div class="onboarding-steps">
+        <div class="step active" data-step="1">
+          <div class="step-icon">
+              <i class="fas fa-user"></i>
+          </div>
+          <h3>Who are you registering as?</h3>
+          <div class="user-type-selection">
+              <div class="user-type-card" id="user">
+                  <div class="card-icon">
+                      <i class="fas fa-running"></i>
+                  </div>
+                  <h4>Gym User</h4>
+                  <p>Looking for the perfect gym</p>
+              </div>
+              <div class="user-type-card" id="gym">
+                  <div class="card-icon">
+                      <i class="fas fa-dumbbell"></i>
+                  </div>
+                  <h4>Gym Owner</h4>
+                  <p>Register your fitness center</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <button class="register-as" id="js-register-as-btn">Continue</button>
+    </div>
+  <script src="./Scripts/gym-center.js"></script>
+</body>
+</html>

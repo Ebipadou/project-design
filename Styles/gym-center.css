@@ -1,0 +1,188 @@
+/* CSS Variables for Color Scheme */
+:root {
+    --cherry-blossom: #edafb8ff;
+    --powder-petal: #f7e1d7ff;
+    --dust-grey: #dedbd2ff;
+    --ash-grey: #b0c4b1ff;
+    --iron-grey: #4a5759ff;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--powder-petal) 0%, var(--dust-grey) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+/* Onboarding Screen */
+.onboarding-container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--shadow);
+    padding: 40px;
+    animation: fadeInUp 0.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.onboarding-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.onboarding-header h2 {
+    font-size: 32px;
+    color: var(--iron-grey);
+    margin-bottom: 10px;
+}
+
+.onboarding-header p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.onboarding-steps {
+    position: relative;
+    min-height: 400px;
+}
+
+.step {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--cherry-blossom);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.step-icon i {
+    font-size: 32px;
+    color: var(--white);
+}
+
+.step h3 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--iron-grey);
+    margin-bottom: 30px;
+}
+
+.user-type-selection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.user-type-card {
+    width: 200px;
+    padding: 30px 20px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.user-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.user-type-card.active {
+    border-color: var(--cherry-blossom);
+    background: rgba(237, 175, 184, 0.05);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--ash-grey);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.card-icon i {
+    font-size: 24px;
+    color: var(--white);
+}
+
+.user-type-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--iron-grey);
+}
+
+.user-type-card p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.register-as {
+  width: 300px;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--cherry-blossom);
+  outline: none;
+  border: none;
+  transition: all 0.2s ease-in;
+}
+
+.register-as:hover {
+  background: #e89ca6;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.user-type-card.selected {
+  box-shadow: 0 8px 20px rgba(241, 1, 93, 0.25);
+  border: 1px solid var(--cherry-blossom);
+}

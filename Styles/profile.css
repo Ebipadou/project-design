@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(95, 76, 114);
+  /* hide scrollbars but allow scrolling */
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+body {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.phone-container {
+  width: 300px;
+  height: 600px;
+  border: 6px solid black;
+  border-radius: 40px;
+  margin: 10px auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  align-items: center;
+  overflow-y: scroll; /* allow vertical scroll inside */
+  overflow-x: hidden;
+  position: relative;
+}
+
+.top-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 20px 0;
+}
+
+#back-arrow {
+  cursor: pointer;
+}
+
+#logout {
+  cursor: pointer;
+}
+
+#edit-user-info {
+  cursor: pointer;
+}
+
+.profile-con {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.profile-left-side {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+
+.profile-img-con {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.753);
+}
+
+.profile-img-header-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-img-sub-text {
+  text-align: left;
+  font-size: 10px;
+}
+
+.profile-contact-con {
+  width: 100%;
+  padding: 10px;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+#profile_placeholder-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.contact-content {
+  width: 100%;
+  display: flex;
+  font-size: 11px;
+  align-items: center;
+  text-align: left;
+  justify-content: left;
+  height: 20px;
+  gap: 5px;
+  color: rgb(128, 128, 128);
+}
+
+.fitness-info-con {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.fitness-info-header {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.fitness-info-content {
+  width: 100%;
+  padding: 2px 15px;
+  background-color: rgba(51, 85, 99, 0.185);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(51, 85, 99, 0.712);
+  border-bottom: 1px solid rgba(51, 85, 99, 0.712);
+  border-right: 1px solid rgba(51, 85, 99, 0.712);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#fitness-info-content2 {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; 
+}
+
+.fitness-info-content-ls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fitness-info-content-text-ls {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.account-settings-con {
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.account-settings-header {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.account-settings-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.acccount-settings-ls {
+  font-size: 10px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+  text-align: left;
+  gap: 7px;
+}
+
+/* Icons */
+
+#back-arrow {
+  width: 20px;
+}
+
+#dumbell-icon {
+  width: 25px;
+}
+
+#edit-icon {
+  width: 20px;
+  cursor: pointer;
+}
+
+#target-icon {
+  width: 15px;
+  margin-left: 4px;
+  margin-right: 5px;
+}
+
+#phone {
+  width: 25px;
+}
+
+#message {
+  width: 25px;
+}
+
+#location {
+  width: 25px;
+}
+
+#account-settings-clock-icon {
+  width: 15px;
+}
+
+#log-out {
+  margin: 30px 0px 15px 0px;
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+  height: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+#user-icon {
+  width: 20px;
+  margin-left: 3px;
+}
+
+#powerIcon {
+  width: 30px;
+  height: 25px;
+}
+
+#supportIcon {
+  width: 25px;
+}
+
+#privacy-icon {
+  width: 25px;
+}
+
+#password-icon {
+  width: 30px;
+  margin-left: -3px;
+  margin-right: -3px;
+}
+
+#language-icon {
+  width: 25px;
+}
+
+/* Icons */
+
+/* FOOTER SECTION */
+
+.footer-section {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(119, 111, 226);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 5px 0px;
+  position: sticky;
+  bottom: 0;   /* sticks to bottom */
+  z-index: 10; /* ensures it’s above content */
+}
+
+.icons {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Background containers */
+#container1 {
+  background-image: url('../trueAssets/IMG-20250923-WA0057.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+/* #container1text {
+  margin-top: 40px;
+  color: red;
+} */
+
+#container2 {
+  background-image: url('../trueAssets/IMG-20250923-WA0060.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+#container3 {
+  background-image: url('../trueAssets/IMG-20250923-WA0067.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+#container4 {
+  background-image: url('../trueAssets/IMG-20250923-WA0068.jpg');
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+.modal-container {
+  width: 200px;
+  height: 200px;
+  border: 2px solid green;
+  position: absolute;
+  background-color: wheat;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  top: 35%;
+}
+
+.modal-container.active {
+  display: flex;
+}
+/* FOOTER SECTION */
