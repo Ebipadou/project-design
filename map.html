@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMap - Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Styles/dashboard.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar glassmorphism">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h1 class="logo-text">FitMap</h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/dashboard.html" class="nav-link" onclick="window.location.href='/dashboard.html'">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/search.html" class="nav-link" onclick="window.location.href = '/search.html'">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/map.html" class="nav-link active" onclick="window.location.href = '/map.html'">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Map</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/profile.html" class="nav-link" onclick="window.location.href = '/profile.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-user">
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=edafb8&color=fff" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <span class="user-type">Gym User</span>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Map Section -->
+        <section id="map" class="content-section active">
+            <div class="section-header">
+                <h2>Find Gyms on Map</h2>
+                <p>Explore gym locations and get directions</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-sidebar">
+                    <div class="map-search">
+                        <div class="input-container">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search gyms on map...">
+                        </div>
+                    </div>
+                    
+                    <div class="gyms-list">
+                        <div class="gym-list-item active">
+                            <div class="gym-marker">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="gym-details">
+                                <h4>Powerhouse Gym</h4>
+                                <div class="gym-distance">0.5 mi away</div>
+                            </div>
+                            <button class="btn-direction">
+                                <i class="fas fa-directions"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="gym-list-item">
+                            <div class="gym-marker">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="gym-details">
+                                <h4>Elite Fitness</h4>
+                                <div class="gym-distance">0.8 mi away</div>
+                            </div>
+                            <button class="btn-direction">
+                                <i class="fas fa-directions"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="gym-list-item">
+                            <div class="gym-marker">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="gym-details">
+                                <h4>Iron Temple Gym</h4>
+                                <div class="gym-distance">1.2 mi away</div>
+                            </div>
+                            <button class="btn-direction">
+                                <i class="fas fa-directions"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="gym-list-item">
+                            <div class="gym-marker">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="gym-details">
+                                <h4>Zenith Fitness</h4>
+                                <div class="gym-distance">1.5 mi away</div>
+                            </div>
+                            <button class="btn-direction">
+                                <i class="fas fa-directions"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-view">
+                    <div class="map-placeholder">
+                        <div class="map-mock">
+                            <div class="map-point" style="top: 30%; left: 40%;">
+                                <div class="point-pulse"></div>
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="map-point" style="top: 45%; left: 50%;">
+                                <div class="point-pulse"></div>
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="map-point" style="top: 60%; left: 35%;">
+                                <div class="point-pulse"></div>
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="map-point" style="top: 55%; left: 60%;">
+                                <div class="point-pulse"></div>
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="user-location">
+                                <i class="fas fa-circle"></i>
+                                <div class="location-pulse"></div>
+                            </div>
+                        </div>
+                        <div class="map-overlay">
+                            <p>Interactive Map View</p>
+                            <p class="map-note">In a full implementation, this would display an interactive map with gym locations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h2 class="logo-text">FitMap</h2>
+                </div>
+                <p class="footer-description">
+                    Connecting fitness enthusiasts with the perfect gyms. Find, compare, and join gyms that match your lifestyle and goals.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/dashboard.html">Home</a></li>
+                    <li><a href="/search.html">Search Gyms</a></li>
+                    <li><a href="/map.html">Gym Map</a></li>
+                    <li><a href="/profile.html">My Profile</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>For Gym Owners</h3>
+                <ul class="footer-links">
+                    <li><a href="#">List Your Gym</a></li>
+                    <li><a href="#">Business Solutions</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new gyms and exclusive deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 FitMap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

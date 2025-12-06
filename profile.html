@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMap - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Styles/dashboard.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar glassmorphism">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h1 class="logo-text">FitMap</h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/dashboard.html" class="nav-link" onclick="window.location.href='/dashboard.html'">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/search.html" class="nav-link" onclick="window.location.href = '/search.html'">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/map.html" class="nav-link" onclick="window.location.href = '/map.html'">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Map</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/profile.html" class="nav-link active" onclick="window.location.href = '/profile.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav-user">
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=edafb8&color=fff" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <span class="user-name">John Doe</span>
+                    <span class="user-type">Gym User</span>
+                </div>
+                <button class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Profile Section -->
+        <section id="profile" class="content-section active">
+            <div class="section-header">
+                <h2>Your Profile</h2>
+                <p>Manage your account and preferences</p>
+            </div>
+            
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=edafb8&color=fff&size=150" alt="Profile Avatar">
+                            <button class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">John Doe</h3>
+                            <p class="profile-email">john.doe@example.com</p>
+                            <div class="profile-badge">Gym User</div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Gyms Visited</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">47</div>
+                            <div class="stat-label">Workouts</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">Reviews</div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-menu">
+                        <a href="#" class="menu-item active" data-tab="personal">
+                            <i class="fas fa-user"></i>
+                            Personal Info
+                        </a>
+                        <a href="#" class="menu-item" data-tab="preferences">
+                            <i class="fas fa-sliders-h"></i>
+                            Preferences
+                        </a>
+                        <a href="#" class="menu-item" data-tab="membership">
+                            <i class="fas fa-id-card"></i>
+                            Membership
+                        </a>
+                        <a href="#" class="menu-item" data-tab="security">
+                            <i class="fas fa-shield-alt"></i>
+                            Security
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-tab active" id="personal-tab">
+                        <h3>Personal Information</h3>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" value="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" value="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john.doe@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+1 (555) 123-4567">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Default Location</label>
+                                <input type="text" id="location" value="New York, NY">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" rows="4" placeholder="Tell us about your fitness journey...">Fitness enthusiast with a passion for strength training and yoga. Always looking for new challenges and ways to improve my health.</textarea>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary">Cancel</button>
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="profile-tab" id="preferences-tab">
+                        <h3>Fitness Preferences</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label>Fitness Goals</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Weight Loss
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Muscle Building
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Endurance Training
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        Flexibility & Mobility
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        General Fitness
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Preferred Gym Types</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Traditional Gym
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        CrossFit Box
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Yoga/Pilates Studio
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        24/7 Access
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        Luxury Fitness Club
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="workout-frequency">Workout Frequency</label>
+                                <select id="workout-frequency">
+                                    <option value="1-2">1-2 times per week</option>
+                                    <option value="3-4" selected>3-4 times per week</option>
+                                    <option value="5-6">5-6 times per week</option>
+                                    <option value="daily">Daily</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Monthly Budget</label>
+                                <select id="budget">
+                                    <option value="<50">Under $50</option>
+                                    <option value="50-100" selected>$50 - $100</option>
+                                    <option value="100-150">$100 - $150</option>
+                                    <option value="150+">$150+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="button" class="btn-secondary">Reset</button>
+                                <button type="submit" class="btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="profile-tab" id="membership-tab">
+                        <h3>Membership Details</h3>
+                        <div class="membership-card">
+                            <div class="membership-header">
+                                <h4>FitMap Premium</h4>
+                                <div class="membership-badge active">Active</div>
+                            </div>
+                            <div class="membership-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Plan</span>
+                                    <span class="detail-value">Monthly Subscription</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Price</span>
+                                    <span class="detail-value">$14.99/month</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Renewal Date</span>
+                                    <span class="detail-value">March 15, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Joined</span>
+                                    <span class="detail-value">January 15, 2024</span>
+                                </div>
+                            </div>
+                            <div class="membership-features">
+                                <h5>Plan Features</h5>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Unlimited gym searches</li>
+                                    <li><i class="fas fa-check"></i> Advanced filters</li>
+                                    <li><i class="fas fa-check"></i> Premium gym recommendations</li>
+                                    <li><i class="fas fa-check"></i> Exclusive deals and discounts</li>
+                                    <li><i class="fas fa-check"></i> Priority customer support</li>
+                                </ul>
+                            </div>
+                            <div class="membership-actions">
+                                <button class="btn-secondary">Change Plan</button>
+                                <button class="btn-primary">Manage Billing</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-tab" id="security-tab">
+                        <h3>Security Settings</h3>
+                        <form class="profile-form" id="password-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password">
+                                <span class="error" id="current-password-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password">
+                                <span class="error" id="new-password-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password">
+                                <span class="error" id="confirm-password-error"></span>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary" id="password-change-submit-button">Update Password</button>
+                            </div>
+                        </form>
+                        
+                        <div class="security-options">
+                            <h4>Privacy Settings</h4>
+                            <div class="privacy-option">
+                                <div class="option-info">
+                                    <h5>Profile Visibility</h5>
+                                    <p>Control who can see your profile and activity</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="privacy-option">
+                                <div class="option-info">
+                                    <h5>Activity Sharing</h5>
+                                    <p>Allow gyms to see your check-ins and reviews</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="privacy-option">
+                                <div class="option-info">
+                                    <h5>Email Notifications</h5>
+                                    <p>Receive emails about new gyms and promotions</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            
+                            <div class="privacy-option">
+                                <div class="option-info">
+                                    <h5>Push Notifications</h5>
+                                    <p>Get alerts about nearby gyms and deals</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h2 class="logo-text">FitMap</h2>
+                </div>
+                <p class="footer-description">
+                    Connecting fitness enthusiasts with the perfect gyms. Find, compare, and join gyms that match your lifestyle and goals.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/dashboard.html">Home</a></li>
+                    <li><a href="/search.html">Search Gyms</a></li>
+                    <li><a href="/map.html">Gym Map</a></li>
+                    <li><a href="/profile.html">My Profile</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>For Gym Owners</h3>
+                <ul class="footer-links">
+                    <li><a href="#">List Your Gym</a></li>
+                    <li><a href="#">Business Solutions</a></li>
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new gyms and exclusive deals.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 FitMap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

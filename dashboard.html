@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitMap - Dashboard</title>
+    <title>FitMap - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/Styles/dashboard.css">
 </head>
@@ -28,25 +28,25 @@
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link active" data-section="home">
+                    <a href="/dashboard.html" class="nav-link active" onclick="window.location.href='/dashboard.html'">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#search" class="nav-link" data-section="search">
+                    <a href="/search.html" class="nav-link" onclick="window.location.href = '/search.html'">
                         <i class="fas fa-search"></i>
                         <span>Search</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#map" class="nav-link" data-section="map">
+                    <a href="/map.html" class="nav-link" onclick="window.location.href = '/map.html'">
                         <i class="fas fa-map-marked-alt"></i>
                         <span>Map</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#profile" class="nav-link" data-section="profile">
+                    <a href="/profile.html" class="nav-link" onclick="window.location.href = '/profile.html'">
                         <i class="fas fa-user"></i>
                         <span>Profile</span>
                     </a>
@@ -200,6 +200,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="gym-card">
                         <div class="gym-image">
                             <img src="/trueAssets/IMG-20250923-WA0068.jpg" alt="Train Gain">
@@ -343,6 +344,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="gym-card">
                         <div class="gym-image">
                             <img src="/trueAssets/1757765497532.Screenshot_20250913-113008.jpg" alt="PowerLift gym">
@@ -378,505 +380,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Search Section -->
-        <section id="search" class="content-section">
-            <div class="section-header">
-                <h2>Find Your Perfect Gym</h2>
-                <p>Search through our extensive database of fitness centers</p>
-            </div>
-            
-            <div class="search-container">
-                <div class="search-bar">
-                    <div class="search-input">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search by gym name, location, or amenities...">
-                    </div>
-                    <button class="btn-primary search-btn">Search</button>
-                </div>
-                
-                <div class="filters">
-                    <div class="filter-group">
-                        <label>Location</label>
-                        <div class="input-container">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" placeholder="Enter location" value="New York, NY">
-                        </div>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <label>Distance</label>
-                        <select class="filter-select">
-                            <option value="1">Within 1 mile</option>
-                            <option value="3" selected>Within 3 miles</option>
-                            <option value="5">Within 5 miles</option>
-                            <option value="10">Within 10 miles</option>
-                            <option value="25">Within 25 miles</option>
-                        </select>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <label>Rating</label>
-                        <select class="filter-select">
-                            <option value="any">Any rating</option>
-                            <option value="4.5">4.5+ stars</option>
-                            <option value="4.0">4.0+ stars</option>
-                            <option value="3.5">3.5+ stars</option>
-                            <option value="3.0">3.0+ stars</option>
-                        </select>
-                    </div>
-                    
-                    <div class="filter-group">
-                        <label>Amenities</label>
-                        <select class="filter-select">
-                            <option value="any">Any amenities</option>
-                            <option value="pool">Pool</option>
-                            <option value="sauna">Sauna</option>
-                            <option value="classes">Group Classes</option>
-                            <option value="personal_training">Personal Training</option>
-                            <option value="24/7">24/7 Access</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="search-results">
-                <div class="results-header">
-                    <h3>24 Gyms Found</h3>
-                    <div class="sort-options">
-                        <label>Sort by:</label>
-                        <select class="sort-select">
-                            <option value="distance">Distance</option>
-                            <option value="rating" selected>Rating</option>
-                            <option value="name">Name</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="results-grid">
-                    <!-- Gym results will be populated here by JavaScript -->
-                </div>
-                
-                <div class="load-more">
-                    <button class="btn-secondary">Load More Results</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Map Section -->
-        <section id="map" class="content-section">
-            <div class="section-header">
-                <h2>Find Gyms on Map</h2>
-                <p>Explore gym locations and get directions</p>
-            </div>
-            
-            <div class="map-container">
-                <div class="map-sidebar">
-                    <div class="map-search">
-                        <div class="input-container">
-                            <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Search gyms on map...">
-                        </div>
-                    </div>
-                    
-                    <div class="gyms-list">
-                        <div class="gym-list-item active">
-                            <div class="gym-marker">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="gym-details">
-                                <h4>Powerhouse Gym</h4>
-                                <div class="gym-distance">0.5 mi away</div>
-                            </div>
-                            <button class="btn-direction">
-                                <i class="fas fa-directions"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="gym-list-item">
-                            <div class="gym-marker">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="gym-details">
-                                <h4>Elite Fitness</h4>
-                                <div class="gym-distance">0.8 mi away</div>
-                            </div>
-                            <button class="btn-direction">
-                                <i class="fas fa-directions"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="gym-list-item">
-                            <div class="gym-marker">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="gym-details">
-                                <h4>Iron Temple Gym</h4>
-                                <div class="gym-distance">1.2 mi away</div>
-                            </div>
-                            <button class="btn-direction">
-                                <i class="fas fa-directions"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="gym-list-item">
-                            <div class="gym-marker">
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="gym-details">
-                                <h4>Zenith Fitness</h4>
-                                <div class="gym-distance">1.5 mi away</div>
-                            </div>
-                            <button class="btn-direction">
-                                <i class="fas fa-directions"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="map-view">
-                    <div class="map-placeholder">
-                        <div class="map-mock">
-                            <div class="map-point" style="top: 30%; left: 40%;">
-                                <div class="point-pulse"></div>
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="map-point" style="top: 45%; left: 50%;">
-                                <div class="point-pulse"></div>
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="map-point" style="top: 60%; left: 35%;">
-                                <div class="point-pulse"></div>
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="map-point" style="top: 55%; left: 60%;">
-                                <div class="point-pulse"></div>
-                                <i class="fas fa-dumbbell"></i>
-                            </div>
-                            <div class="user-location">
-                                <i class="fas fa-circle"></i>
-                                <div class="location-pulse"></div>
-                            </div>
-                        </div>
-                        <div class="map-overlay">
-                            <p>Interactive Map View</p>
-                            <p class="map-note">In a full implementation, this would display an interactive map with gym locations</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Profile Section -->
-        <section id="profile" class="content-section">
-            <div class="section-header">
-                <h2>Your Profile</h2>
-                <p>Manage your account and preferences</p>
-            </div>
-            
-            <div class="profile-container">
-                <div class="profile-sidebar">
-                    <div class="profile-card">
-                        <div class="profile-avatar">
-                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=edafb8&color=fff&size=150" alt="Profile Avatar">
-                            <button class="edit-avatar">
-                                <i class="fas fa-camera"></i>
-                            </button>
-                        </div>
-                        <div class="profile-info">
-                            <h3 class="profile-name">John Doe</h3>
-                            <p class="profile-email">john.doe@example.com</p>
-                            <div class="profile-badge">Gym User</div>
-                        </div>
-                    </div>
-                    
-                    <div class="profile-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">12</div>
-                            <div class="stat-label">Gyms Visited</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">47</div>
-                            <div class="stat-label">Workouts</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">8</div>
-                            <div class="stat-label">Reviews</div>
-                        </div>
-                    </div>
-                    
-                    <div class="profile-menu">
-                        <a href="#" class="menu-item active" data-tab="personal">
-                            <i class="fas fa-user"></i>
-                            Personal Info
-                        </a>
-                        <a href="#" class="menu-item" data-tab="preferences">
-                            <i class="fas fa-sliders-h"></i>
-                            Preferences
-                        </a>
-                        <a href="#" class="menu-item" data-tab="membership">
-                            <i class="fas fa-id-card"></i>
-                            Membership
-                        </a>
-                        <a href="#" class="menu-item" data-tab="security">
-                            <i class="fas fa-shield-alt"></i>
-                            Security
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="profile-content">
-                    <div class="profile-tab active" id="personal-tab">
-                        <h3>Personal Information</h3>
-                        <form class="profile-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name</label>
-                                    <input type="text" id="firstName" value="John">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name</label>
-                                    <input type="text" id="lastName" value="Doe">
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" value="john.doe@example.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" value="+1 (555) 123-4567">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="location">Default Location</label>
-                                <input type="text" id="location" value="New York, NY">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="bio">Bio</label>
-                                <textarea id="bio" rows="4" placeholder="Tell us about your fitness journey...">Fitness enthusiast with a passion for strength training and yoga. Always looking for new challenges and ways to improve my health.</textarea>
-                            </div>
-                            
-                            <div class="form-actions">
-                                <button type="button" class="btn-secondary">Cancel</button>
-                                <button type="submit" class="btn-primary">Save Changes</button>
-                            </div>
-                        </form>
-                    </div>
-                    
-                    <div class="profile-tab" id="preferences-tab">
-                        <h3>Fitness Preferences</h3>
-                        <form class="profile-form">
-                            <div class="form-group">
-                                <label>Fitness Goals</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        Weight Loss
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        Muscle Building
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        Endurance Training
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        Flexibility & Mobility
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        General Fitness
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Preferred Gym Types</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        Traditional Gym
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        CrossFit Box
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        Yoga/Pilates Studio
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                        24/7 Access
-                                    </label>
-                                    <label class="checkbox-container">
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                        Luxury Fitness Club
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="workout-frequency">Workout Frequency</label>
-                                <select id="workout-frequency">
-                                    <option value="1-2">1-2 times per week</option>
-                                    <option value="3-4" selected>3-4 times per week</option>
-                                    <option value="5-6">5-6 times per week</option>
-                                    <option value="daily">Daily</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="budget">Monthly Budget</label>
-                                <select id="budget">
-                                    <option value="<50">Under $50</option>
-                                    <option value="50-100" selected>$50 - $100</option>
-                                    <option value="100-150">$100 - $150</option>
-                                    <option value="150+">$150+</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-actions">
-                                <button type="button" class="btn-secondary">Reset</button>
-                                <button type="submit" class="btn-primary">Save Preferences</button>
-                            </div>
-                        </form>
-                    </div>
-                    
-                    <div class="profile-tab" id="membership-tab">
-                        <h3>Membership Details</h3>
-                        <div class="membership-card">
-                            <div class="membership-header">
-                                <h4>FitMap Premium</h4>
-                                <div class="membership-badge active">Active</div>
-                            </div>
-                            <div class="membership-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Plan</span>
-                                    <span class="detail-value">Monthly Subscription</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Price</span>
-                                    <span class="detail-value">$14.99/month</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Renewal Date</span>
-                                    <span class="detail-value">March 15, 2024</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Joined</span>
-                                    <span class="detail-value">January 15, 2024</span>
-                                </div>
-                            </div>
-                            <div class="membership-features">
-                                <h5>Plan Features</h5>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Unlimited gym searches</li>
-                                    <li><i class="fas fa-check"></i> Advanced filters</li>
-                                    <li><i class="fas fa-check"></i> Premium gym recommendations</li>
-                                    <li><i class="fas fa-check"></i> Exclusive deals and discounts</li>
-                                    <li><i class="fas fa-check"></i> Priority customer support</li>
-                                </ul>
-                            </div>
-                            <div class="membership-actions">
-                                <button class="btn-secondary">Change Plan</button>
-                                <button class="btn-primary">Manage Billing</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="profile-tab" id="security-tab">
-                        <h3>Security Settings</h3>
-                        <form class="profile-form" id="password-form">
-                            <div class="form-group">
-                                <label for="current-password">Current Password</label>
-                                <input type="password" id="current-password">
-                                <span class="error" id="current-password-error"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="new-password">New Password</label>
-                                <input type="password" id="new-password">
-                                <span class="error" id="new-password-error"></span>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="confirm-password">Confirm New Password</label>
-                                <input type="password" id="confirm-password">
-                                <span class="error" id="confirm-password-error"></span>
-                            </div>
-                            
-                            <div class="form-actions">
-                                <button type="submit" class="btn-primary" id="password-change-submit-button">Update Password</button>
-                            </div>
-                        </form>
-                        
-                        <div class="security-options">
-                            <h4>Privacy Settings</h4>
-                            <div class="privacy-option">
-                                <div class="option-info">
-                                    <h5>Profile Visibility</h5>
-                                    <p>Control who can see your profile and activity</p>
-                                </div>
-                                <label class="toggle-switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            
-                            <div class="privacy-option">
-                                <div class="option-info">
-                                    <h5>Activity Sharing</h5>
-                                    <p>Allow gyms to see your check-ins and reviews</p>
-                                </div>
-                                <label class="toggle-switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            
-                            <div class="privacy-option">
-                                <div class="option-info">
-                                    <h5>Email Notifications</h5>
-                                    <p>Receive emails about new gyms and promotions</p>
-                                </div>
-                                <label class="toggle-switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                            
-                            <div class="privacy-option">
-                                <div class="option-info">
-                                    <h5>Push Notifications</h5>
-                                    <p>Get alerts about nearby gyms and deals</p>
-                                </div>
-                                <label class="toggle-switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -903,10 +406,10 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#search">Search Gyms</a></li>
-                    <li><a href="#map">Gym Map</a></li>
-                    <li><a href="#profile">My Profile</a></li>
+                    <li><a href="/dashboard.html">Home</a></li>
+                    <li><a href="/search.html">Search Gyms</a></li>
+                    <li><a href="/map.html">Gym Map</a></li>
+                    <li><a href="/profile.html">My Profile</a></li>
                 </ul>
             </div>
             

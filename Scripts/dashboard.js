@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 passwordForm.addEventListener('submit', () => {
-    e.preventDefault()
+    e.preventDefault();
 
 })
 
 function authenticateForm() {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
-  let formValid = true
+  let formValid = true;
   
   if (userJsonData) {
     if (!Object.values(userJsonData).includes(currentPassword)) {
