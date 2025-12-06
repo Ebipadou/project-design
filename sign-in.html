@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign into your account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./Styles/sign in.css">
+</head>
+
+  <div class="form-container">
+    <form action="/" id="form">
+
+      <div class="form-header">
+        <h1>Sign In</h1>
+        <div class="dumbell-icon-con">
+          <i class="fas fa-sign-in-alt fa-2x" class="dumbbell"></i>
+        </div>
+        <p class="form-text">Welcome back! Please sign in to your account.</p>
+      </div>
+      
+      <div class="form-data">
+        <div class="label-con">
+          <label for="username">Username</label>
+        </div>
+        <div class="input-field-con">
+          <div class="icon-con">
+            <i class="fas fa-user" id="user-icon"></i>
+          </div>
+          <input type="text" name="username" id="username" class="input">
+        </div>
+        <span class="errors" id="username-error"></span>
+      </div>
+      
+      <div class="form-data">
+        <div class="label-con">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field-con">
+          <div class="icon-con">
+            <i class="fas fa-lock" id="user-icon"></i>
+          </div>
+          <input type="password" name="password" id="password" class="input">
+        </div>
+        <span class="errors" id="password-error"></span>
+      </div>
+      
+      <div class="form-data terms-and-conditions-con">
+        <div class="terms-and-conditions">
+          <input type="checkbox" name="check" id="check">
+          <p>Remember me</p>
+        </div>
+        <span class="errors" id="check-error"></span>
+      </div>
+
+      <a href="/"></a>
+      
+
+      <input type="submit" name="submit" class="submit" id="submit">
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="ui-modal-component">
+    <!-- <div class="exit-icon-con">
+      <img src="/trueAssets/x.png" alt="exit" class="exit">
+    </div> -->
+    <div class="checkmark">
+      <i class="fas fa-check fa-2x"></i>
+    </div>
+    <div class="modal-heading">Login Successful!</div>
+  </div>
+
+  <script src="./Scripts/signin.js"></script>
+<body>
+  

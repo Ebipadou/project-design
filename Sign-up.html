@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./Styles/signup page.css">
+</head>
+
+  <div class="form-container">
+    <form action="/" id="form">
+
+      <div class="form-header">
+        <h1>Sign Up</h1>
+        <div class="dumbell-icon-con">
+          <i class="fas fa-dumbbell fa-2x" class="dumbbell"></i>
+        </div>
+        <p class="form-text">Create your account to get started!</p>
+      </div>
+      
+      <div class="form-data">
+        <div class="label-con">
+          <label for="username">Username</label>
+        </div>
+        <div class="input-field-con">
+          <div class="icon-con">
+            <i class="fas fa-user" id="user-icon"></i>
+          </div>
+          <input type="text" name="username" id="username" class="input">
+        </div>
+        <span class="errors" id="username-error"></span>
+      </div>
+
+      <div class="form-data">
+        <div class="label-con">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field-con">
+          <div class="icon-con">
+            <i class="fas fa-envelope" id="user-icon"></i>
+          </div>
+          <input type="text" name="email" id="email" class="input">
+        </div>
+        <span class="errors" id="email-error"></span>
+      </div>
+      
+      <div class="form-data">
+        <div class="label-con">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field-con">
+          <div class="icon-con">
+            <i class="fas fa-lock" id="user-icon"></i>
+          </div>
+          <input type="password" name="password" id="password" class="input">
+        </div>
+        <span class="errors" id="password-error"></span>
+      </div>
+      
+      <div class="form-data terms-and-conditions-con">
+        <div class="terms-and-conditions">
+          <input type="checkbox" name="check" id="check">
+          <p>I agree to the <a href="#">Terms</a> and <a href="#">Conditions</a></p>
+        </div>
+        <span class="errors" id="check-error"></span>
+      </div>
+      
+
+      <input type="submit" name="submit" class="submit" id="submit">
+    </form>
+
+    <div class="sign-up-with-con">
+      <div class="link-con">
+        <a href="#" class="link" id="google-link">Sign up with Google</a>
+      </div>
+      <div class="link-con">
+        <a href="#" class="link" id="apple-link">Sign up with Apple</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="ui-modal-component">
+    <!-- <div class="exit-icon-con">
+      <img src="/trueAssets/x.png" alt="exit" class="exit">
+    </div> -->
+    <div class="checkmark">
+      <i class="fas fa-check fa-2x"></i>
+    </div>
+    <div class="modal-heading">Sign-up Successful!</div>
+  </div>
+
+  <script src="./Scripts/signup.js"></script>
+<body>
+  

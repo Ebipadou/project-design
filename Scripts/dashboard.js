@@ -12,14 +12,52 @@ const searchBtn = document.querySelector('.search-btn');
 const loadMoreBtn = document.querySelector('.load-more .btn-secondary');
 const logoutBtn = document.querySelector('.logout-btn');
 
+
+// For the change password section
+const userData = localStorage.getItem('userBioData');
+const userJsonData = JSON.parse(userData);
+const currentPassword = document.getElementById('current-password');
+const newPassword = document.getElementById('new-password');
+const confirmPassword = document.getElementById('confirm-password');
+const currentPasswordError = document.getElementById('current-password-error');
+const newPasswordError = document.getElementById('new-password-error');
+const confirmPasswordError = document.getElementById('confirm-password-error');
+const passwordForm = document.getElementById('password-form');
+
+
 // Initialize the dashboard
 document.addEventListener('DOMContentLoaded', function() {
-    // Set up event listeners
     setupEventListeners();
     
-    // Load initial data
     loadSearchResults();
 });
+
+passwordForm.addEventListener('submit', () => {
+    e.preventDefault()
+
+})
+
+function authenticateForm() {
+  const usernameValue = username.value.trim();
+  const passwordValue = password.value.trim();
+  let formValid = true
+  
+  if (userJsonData) {
+    if (!Object.values(userJsonData).includes(currentPassword)) {
+      currentPassword.textContent = 'Password not foundeeezy!';
+      setTimeout(() => usernameErrorError.textContent = '', 2000);
+      formValid = false;
+    }
+    if (!Object.values(userJsonData).includes(passwordValue)) {
+      passwordError.textContent = 'Incorrect password!';
+      setTimeout(() => passwordError.textContent = '', 2000);
+      formValid = false;
+    }
+  }
+
+  return formValid;
+  
+}
 
 // Set up all event listeners
 function setupEventListeners() {
@@ -160,12 +198,14 @@ function setupEventListeners() {
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
+            // e.preventDefault();
             // In a real app, this would submit the form data
             showNotification('Settings saved successfully!');
         });
     });
 }
+
+
 
 // Perform search
 function performSearch() {

@@ -9,7 +9,6 @@ const passwordError = document.getElementById('password-error');
 
 const userData = localStorage.getItem('userBioData');
 const userJsonData = JSON.parse(userData);
-console.log(userJsonData);
 
 
 form.addEventListener('submit', (e) => {
@@ -45,5 +44,4 @@ function authenticateForm() {
 
   return formValid;
   
-
 }

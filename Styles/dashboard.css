@@ -1202,6 +1202,11 @@ body {
     border-bottom: none;
 }
 
+.error {
+    color: red;
+    font-size: 10px;
+}
+
 .option-info h5 {
     font-size: 16px;
     margin-bottom: 5px;
